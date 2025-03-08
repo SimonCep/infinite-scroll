@@ -1,0 +1,10 @@
+:root {
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+body {
+  font-family: 'Noto Sans', sans-serif;
+  background-color: #e7e7e7;
+}

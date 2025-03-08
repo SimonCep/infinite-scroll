@@ -1,0 +1,250 @@
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(200px, 1fr));
+    gap: 50px;
+    padding: 50px;
+}
+
+.photoContainer {
+    position: relative;
+    aspect-ratio: 16 / 10;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.photo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.3s ease-in-out;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.photoContainer:hover .overlay {
+    opacity: 1;
+}
+
+.title {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.separator {
+    width: 25%;
+    border: 1px solid white;
+    margin: 5px 0;
+}
+
+.photographer {
+    font-style: italic;
+    font-size: 1.2rem;
+    margin-top: 0px;
+    margin-bottom: 10px;
+}
+
+.favouriteButton {
+    background: transparent;
+    color: white;
+    border: 2px solid white;
+    padding: 8px 12px;
+    border-radius: 32px;
+    cursor: pointer;
+    font-size: 0.9rem;
+}
+
+/* Phones (up to 600px) */
+@media all and (width < 600px) {
+    .gallery {
+        grid-template-columns: repeat(3, minmax(150px, 1fr));
+        gap: 15px;
+        padding: 20px;
+    }
+
+    .photoContainer {
+        border-radius: 2px;
+    }
+
+    .title {
+        font-size: 0.7rem;
+        margin-bottom: 0rem;
+        margin-top: 1.9rem;
+    }
+
+    .separator {
+        width: 15%;
+        margin: 3px;
+    }
+
+    .photographer {
+        font-size: 0.7rem;
+        margin-bottom: 0.2rem;
+    }
+
+    .favouriteButton {
+        font-size: 0.7rem;
+        padding: 0.3rem 0.5rem;
+        border-radius: 16px;
+        margin-bottom: 0.3rem;
+    }
+}
+
+/* Small Tablets (600px - 768px) */
+@media all and (width >= 600px) {
+    .gallery {
+        grid-template-columns: repeat(3, minmax(180px, 1fr));
+        gap: 20px;
+        padding: 30px;
+    }
+    
+    .photoContainer {
+        border-radius: 4px;
+    }
+
+    .title {
+        font-size: 0.9rem;
+        margin-bottom: 0rem;
+        margin-top: 2.1rem;
+    }
+
+    .separator {
+        width: 25%;
+        margin: 3px;
+    }
+
+    .photographer {
+        font-size: 0.9rem;
+        margin-bottom: 0.6rem;
+    }
+
+    .favouriteButton {
+        font-size: 0.9rem;
+        padding: 0.5rem 0.8rem;
+        border-radius: 24px;
+        margin-bottom: 0.3rem;
+    }
+}
+
+/* Tablets (768px - 992px) */
+@media all and (width >= 768px) {
+    .gallery {
+        grid-template-columns: repeat(3, minmax(200px, 1fr));
+        gap: 30px;
+        padding: 40px;
+    }
+    
+    .photoContainer {
+        border-radius: 8px;
+    }
+
+    .title {
+        font-size: 1.1rem;
+        margin-bottom: 0rem;
+        margin-top: 2.3rem;
+    }
+
+    .separator {
+        width: 30%;
+        margin: 3px;
+    }
+
+    .photographer {
+        font-size: 1.1rem;
+        margin-bottom: 1rem;
+    }
+
+    .favouriteButton {
+        font-size: 1.1rem;
+        padding: 0.7rem 1rem;
+        border-radius: 32px;
+        margin-bottom: 0.3rem;
+    }
+}
+
+/* Desktops (992px - 1200px) */
+@media all and (width >= 992px) {
+    .gallery {
+        grid-template-columns: repeat(3, minmax(220px, 1fr));
+        gap: 40px;
+        padding: 50px;
+    }
+
+    .photoContainer {
+        border-radius: 16px;
+    }
+
+    .title {
+        font-size: 1.3rem;
+        margin-bottom: 0rem;
+        margin-top: 3rem;
+    }
+
+    .separator {
+        width: 35%;
+        margin: 3px;
+    }
+
+    .photographer {
+        font-size: 1.3rem;
+        margin-bottom: 1rem;
+    }
+
+    .favouriteButton {
+        font-size: 1.3rem;
+        padding: 0.9rem 1.2rem;
+        border-radius: 40px;
+        margin-bottom: 0.3rem;
+    }
+}
+
+/* Large Screens (1200px and above) */
+@media all and (width >= 1200px) {
+    .gallery {
+        grid-template-columns: repeat(3, minmax(240px, 1fr));
+        gap: 50px;
+        padding: 60px;
+    }
+
+    .photoContainer {
+        border-radius: 20px;
+    }
+
+    .title {
+        font-size: 1.5rem;
+        margin-bottom: 0rem;
+        margin-top: 3rem;
+    }
+
+    .separator {
+        width: 35%;
+        margin: 3px;
+    }
+
+    .photographer {
+        font-size: 1.5rem;
+        margin-bottom: 0.8rem;
+    }
+
+    .favouriteButton {
+        font-size: 1.5rem;
+        padding: 0.7rem 1.4rem;
+        border-radius: 48px;
+        margin-bottom: 0.3rem;
+    }
+}

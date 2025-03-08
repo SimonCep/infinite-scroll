@@ -1,0 +1,12 @@
+Implement media query (pusiau, reikia fontus)
+Tests (Jest)
+ReadME
+Lazy-loading images
+A responsive image solution
+
+
+
+
+Optional:
+development tools you use (CSS pre-processors, Javascript task-runners, testing libraries, etc.)?
+usage of cutting-edge technologies available in modern browsers?

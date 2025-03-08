@@ -1,0 +1,166 @@
+/* Grid Layout */
+.photo-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 75px;
+}
+
+/* Card Styles */
+.card {
+    position: relative;
+    width: 100%;
+    /* height: 350px; */
+    overflow: hidden;
+    border-radius: 16px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2), 4px 0 8px rgba(0, 0, 0, 0.2);
+}
+
+.card-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0);
+    transition: background-color 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.card:hover .card-overlay {
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 1;
+}
+
+.title {
+    font-weight: bold;
+    text-align: center;
+    color: white;
+    margin-bottom: 5px; /* Reduced margin */
+}
+
+.separator {
+    width: 25%;
+    border: none;
+    border-top: 3px solid white;
+    margin: 5px auto; /* Reduced margin */
+}
+
+.photographer {
+    font-style: italic;
+    text-align: center;
+    font-size: 1.5em;
+    color: white;
+    margin-top: 5px; /* Reduced margin */
+}
+
+.favourite-button {
+    background: transparent;
+    color: white;
+    border: none;
+    padding: 8px;
+    border: 2px solid white;
+    border-radius: 32px;
+    cursor: pointer;
+    margin: 5px auto;
+    width: 100px;
+}
+
+.favourite-button:hover {
+    background: rgba(255, 255, 255, 0.1); /* Adds a subtle highlight */
+    text-decoration: none;
+}
+
+/* Media Queries */
+
+@media all and (max-width: 600px) {
+    .photo-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 27px;
+    }
+    .card {
+        height: 250px;
+    }
+    .photographer {
+        font-size: 1.2em;
+    }
+    .photographer {
+        font-size: 1.2em;
+    }
+    .title {
+        font-size: 1em;
+    }
+}
+
+@media all and (min-width: 600px) {
+    .photo-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 50px;
+    }
+    .card {
+        height: 300px;
+    }
+    .photographer {
+        font-size: 1.4em;
+    }
+    .title {
+        font-size: 1.1em;
+    }
+}
+
+@media all and (min-width: 768px) {
+    .photo-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 60px;
+    }
+    .card {
+        height: 350px;
+    }
+    .photographer {
+        font-size: 1.5em;
+    }
+    .title {
+        font-size: 1.2em;
+    }
+}
+
+@media all and (min-width: 992px) {
+    .photo-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 75px;
+    }
+    .card {
+        height: 400px;
+    }
+    .photographer {
+        font-size: 1.6em;
+    }
+    .title {
+        font-size: 1.3em;
+    }
+}
+
+@media all and (min-width: 1200px) {
+    .photo-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 90px;
+    }
+    .card {
+        height: 450px;
+    }
+    .photographer {
+        font-size: 1.7em;
+    }
+    .title {
+        font-size: 1.4em;
+    }
+}
