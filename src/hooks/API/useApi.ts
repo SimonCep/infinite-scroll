@@ -1,6 +1,6 @@
 import { useCallback } from 'react';
-import { BASE_URL, PEXELS_API_KEY } from '../data/constants';
-import { type HttpMethod, type CuratedPhotosResponse } from '../types/api';
+import { BASE_URL, PEXELS_API_KEY } from '../../data/constants';
+import { type HttpMethod, type CuratedPhotosResponse } from '../../types/api';
 
 interface ApiError {
   status: number;

@@ -1,4 +1,4 @@
-import type { Photo } from './api';
+import type { Photo } from './photo';
 
 export interface PhotoCardProps {
     photo: Photo;
